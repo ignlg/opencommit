@@ -4,9 +4,9 @@
     <h1 align="center">OpenCommit</h1>
     <h4 align="center">Follow the bird <a href="https://twitter.com/_sukharev_"><img src="https://img.shields.io/twitter/follow/_sukharev_?style=flat&label=_sukharev_&logo=twitter&color=0bf&logoColor=fff" align="center"></a>
   </div>
-	<h2>Auto-generate meaningful commits in a second</h2>
-	<p>Killing lame commits with AI 🤯🔫</p>
-	<a href="https://www.npmjs.com/package/opencommit"><img src="https://img.shields.io/npm/v/opencommit" alt="Current version"></a>
+ <h2>Auto-generate meaningful commits in a second</h2>
+ <p>Killing lame commits with AI 🤯🔫</p>
+ <a href="https://www.npmjs.com/package/opencommit"><img src="https://img.shields.io/npm/v/opencommit" alt="Current version"></a>
   <h4 align="center">🪩 Winner of <a href="https://twitter.com/_sukharev_/status/1683448136973582336">GitHub 2023 hackathon</a> 🪩</h4>
 </div>
 
@@ -58,7 +58,7 @@ git add <files...>
 oco
 ```
 
-Link to the GitMoji specification: https://gitmoji.dev/
+Link to the GitMoji specification: <https://gitmoji.dev/>
 
 You can also run it with local model through ollama:
 
@@ -82,6 +82,14 @@ This is due to limit the number of tokens sent in each request. However, if you 
 
 ```
 oco --fgm
+```
+
+#### Skip Commit Confirmation
+
+This flag allows users to automatically commit the changes without having to manually confirm the commit message. This is useful for users who want to streamline the commit process and avoid additional steps. To use this flag, you can run the following command:
+
+```
+oco --yes
 ```
 
 ## Configuration
@@ -150,6 +158,20 @@ oco config set OCO_MODEL=gpt-4-0125-preview
 
 Make sure that you spell it `gpt-4` (lowercase) and that you have API access to the 4th model. Even if you have ChatGPT+, that doesn't necessarily mean that you have API access to GPT-4.
 
+### Switch to Azure OpenAI
+
+By default OpenCommit uses [OpenAI](https://openai.com).
+
+You could switch to [Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/)🚀
+
+```sh
+opencommit config set OCO_AI_PROVIDER=azure
+```
+
+Of course need to set 'OPENAI_API_KEY'. And also need to set the
+'OPENAI_BASE_PATH' for the endpoint and set the deployment name to
+'model'.
+
 ### Locale configuration
 
 To globally specify the language used to generate commit messages:
@@ -189,9 +211,9 @@ oco config set OCO_PROMPT_MODULE=<module>
 
 Replace `<module>` with either `conventional-commit` or `@commitlint`.
 
-#### Example:
+#### Example
 
-To switch to using th` '@commitlint` prompt module, run:
+To switch to using th`'@commitlint` prompt module, run:
 
 ```sh
 oco config set OCO_PROMPT_MODULE=@commitlint
