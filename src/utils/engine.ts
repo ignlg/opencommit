@@ -11,9 +11,8 @@ export function getEngine(): AiEngine {
   const provider = config?.OCO_AI_PROVIDER;
   if (provider?.startsWith('ollama')) {
     const model = provider.split('/')[1];
-    if (model) {
-      ollamaAi.setModel(model);
-    }
+    if (model) ollamaAi.setModel(model);
+    
     return ollamaAi;
   } else if (config?.OCO_AI_PROVIDER == 'anthropic') {
     return anthropicAi;

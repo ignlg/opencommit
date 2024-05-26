@@ -4,9 +4,9 @@
     <h1 align="center">OpenCommit</h1>
     <h4 align="center">Follow the bird <a href="https://twitter.com/_sukharev_"><img src="https://img.shields.io/twitter/follow/_sukharev_?style=flat&label=_sukharev_&logo=twitter&color=0bf&logoColor=fff" align="center"></a>
   </div>
- <h2>Auto-generate meaningful commits in a second</h2>
- <p>Killing lame commits with AI 🤯🔫</p>
- <a href="https://www.npmjs.com/package/opencommit"><img src="https://img.shields.io/npm/v/opencommit" alt="Current version"></a>
+	<h2>Auto-generate meaningful commits in a second</h2>
+	<p>Killing lame commits with AI 🤯🔫</p>
+	<a href="https://www.npmjs.com/package/opencommit"><img src="https://img.shields.io/npm/v/opencommit" alt="Current version"></a>
   <h4 align="center">🪩 Winner of <a href="https://twitter.com/_sukharev_/status/1683448136973582336">GitHub 2023 hackathon</a> 🪩</h4>
 </div>
 
@@ -58,7 +58,7 @@ git add <files...>
 oco
 ```
 
-Link to the GitMoji specification: <https://gitmoji.dev/>
+Link to the GitMoji specification: https://gitmoji.dev/
 
 You can also run it with local model through ollama:
 
@@ -105,7 +105,7 @@ OCO_TOKENS_MAX_OUTPUT=<max response tokens (default: 500)>
 OCO_OPENAI_BASE_PATH=<may be used to set proxy path to OpenAI api>
 OCO_DESCRIPTION=<postface a message with ~3 sentences description of the changes>
 OCO_EMOJI=<boolean, add GitMoji>
-OCO_MODEL=<either 'gpt-4o', 'gpt-4', 'gpt-4-turbo', 'gpt-3.5-turbo' (default), 'gpt-3.5-turbo-0125', 'gpt-4-1106-preview', 'gpt-4-turbo-preview' or 'gpt-4-0125-preview'>
+OCO_MODEL=<either 'gpt-4', 'gpt-4-turbo', 'gpt-3.5-turbo' (default), 'gpt-3.5-turbo-0125', 'gpt-4-1106-preview', 'gpt-4-turbo-preview' or 'gpt-4-0125-preview'>
 OCO_LANGUAGE=<locale, scroll to the bottom to see options>
 OCO_MESSAGE_TEMPLATE_PLACEHOLDER=<message template placeholder, default: '$msg'>
 OCO_PROMPT_MODULE=<either conventional-commit or @commitlint, default: conventional-commit>
@@ -211,9 +211,9 @@ oco config set OCO_PROMPT_MODULE=<module>
 
 Replace `<module>` with either `conventional-commit` or `@commitlint`.
 
-#### Example
+#### Example:
 
-To switch to using th`'@commitlint` prompt module, run:
+To switch to using th` '@commitlint` prompt module, run:
 
 ```sh
 oco config set OCO_PROMPT_MODULE=@commitlint
